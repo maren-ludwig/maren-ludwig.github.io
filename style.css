@@ -1,0 +1,354 @@
+:root {
+    --accent: #2c5f6e;
+    --accent-light: #3d7a8a;
+    --text: #2a2a2a;
+    --muted: #666;
+    --border: #e2e2de;
+    --bg: #fafaf8;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.72;
+    color: var(--text);
+    background: var(--bg);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+}
+
+/* ── Navigation ── */
+
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+.nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+
+.nav-name:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.93rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* ── Main wrapper ── */
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ── About section ── */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 4.5rem;
+    padding: 5rem 0 4.5rem;
+    align-items: start;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 0.45rem;
+}
+
+.position {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 1.9rem;
+}
+
+.bio {
+    font-size: 0.97rem;
+    color: var(--text);
+    margin-bottom: 0.9rem;
+}
+
+.contact-block {
+    margin-top: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.contact-block a {
+    color: var(--accent);
+}
+
+.icon-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.2rem;
+}
+
+.icon-links a {
+    display: inline-block;
+    padding: 0.35rem 0.95rem;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.icon-links a:hover {
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ── Generic sections ── */
+
+.section {
+    padding: 3.5rem 0 2.5rem;
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 2.2rem 0 1.1rem;
+}
+
+h3:first-of-type {
+    margin-top: 0;
+}
+
+/* ── Papers ── */
+
+.paper {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.paper:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.paper.wip {
+    padding-bottom: 0.2rem;
+}
+
+.paper-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+}
+
+.paper-title a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.paper-title a:hover {
+    color: var(--accent);
+}
+
+.paper-meta {
+    font-size: 0.91rem;
+    color: var(--muted);
+    margin-bottom: 0.15rem;
+}
+
+.paper-status {
+    font-size: 0.91rem;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+}
+
+.abstract-toggle {
+    margin-top: 0.4rem;
+    font-size: 0.91rem;
+}
+
+.abstract-toggle summary {
+    color: var(--accent);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.abstract-toggle summary::before {
+    content: '▸';
+    font-size: 0.75rem;
+    transition: transform 0.15s;
+}
+
+.abstract-toggle[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.abstract-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.abstract-text {
+    margin-top: 0.7rem;
+    color: #555;
+    line-height: 1.65;
+    max-width: 680px;
+}
+
+.placeholder-note {
+    font-size: 0.93rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* ── Teaching ── */
+
+.teaching-item {
+    margin-bottom: 1.1rem;
+}
+
+.course-name {
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.course-role {
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.course-meta {
+    font-size: 0.91rem;
+    color: var(--muted);
+}
+
+/* ── Footer ── */
+
+footer {
+    max-width: 960px;
+    margin: 3rem auto 0;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 720px) {
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0 2.5rem;
+    }
+
+    .about-photo img {
+        max-width: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.4rem;
+    }
+
+    main {
+        padding: 0 1.5rem;
+    }
+}
